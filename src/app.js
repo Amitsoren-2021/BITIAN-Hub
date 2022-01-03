@@ -1,14 +1,18 @@
 const express = require("express");
-require("./db/conn")
+const path = require("path");
 const app = express();
-const port = process.env.PORT ||3000;
+require("./db/conn")
+const port=process.env.PORT ||3000;
+ 
+// const static_path = path.join(_dirname,"../public")
+console.log(path.join(__dirname));
 
-//routing
+// app.use(express.static(static_path));
+
 app.get("/",(req,res)=>{
-     res.send("hello everyone");
-})
+    res.send("hello from ieee")
+});
 
-//server create
 app.listen(port,()=>{
-    console.log(`server is running at port no ${port}`);
+    console.log(`server is runnning at port no ${port}`);
 })

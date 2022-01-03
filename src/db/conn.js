@@ -1,13 +1,11 @@
 const mongoose = require("mongoose");
 
-//creating a database
-mongoose.connect("mongodb://localhost:27017/amit",{
-     useCreateIndex:true,
-     useNewUrlParser:true,
-     useUnifiedTopology:true
+mongoose.connect("mongodb://localhost:27017/youtuberegistration",{
+    useNewUrlParsel:true,
+    useUniformTopolgy:true,
+    useCreateIndex:true
 }).then(()=>{
-console.log("connection succesfully");
-}).catch((error) => {
-    console.log(error);
+    console.log(`connection succesfull`);
+}).catch((e)=>{
+    console.log(`no connection`);
 })
-
